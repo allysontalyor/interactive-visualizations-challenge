@@ -27,8 +27,7 @@ function init() {
 //============================================================
 var otu_bubble = [1167, 2859, 482, 2264, 41, 1189, 352, 189, 2318, 1977, 3450, 874, 1959, 2191, 1950, 2077, 2275, 944, 2184, 2244, 2024, 2419, 2811, 165, 2782, 2247, 2011, 2396, 830, 2964, 1795, 2722, 307, 2178, 2908, 1193, 2167, 1208, 2039, 1274, 2739, 2737, 1314, 1962, 2186, 2335, 2936, 907, 833, 2483, 2475, 2491, 2291, 159, 2571, 2350, 2342, 2546, 725, 170, 1505, 513, 259, 1169, 258, 1232, 1497, 1498, 1503, 412, 2235, 1960, 1968, 121, 2065, 340, 2110, 2188, 357, 342];
 var sample_values_bubble = [163, 126, 113, 78, 71, 51, 50, 47, 40, 40, 37, 36, 30, 28, 25, 23, 22, 19, 19, 14, 13, 13, 13, 12, 12, 11, 11, 11, 10, 10, 10, 8, 7, 7, 7, 6, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2];
-var otu_length = otu_bubble.length;
-console.log(otu_length);
+var otu_labels_bubble = ["Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Porphyromonas", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Peptoniphilus", "Bacteria", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI", "Bacteria", "Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Porphyromonas", "Bacteria", "Bacteria", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Anaerococcus", "Bacteria;Firmicutes;Clostridia;Clostridiales", "Bacteria;Proteobacteria;Epsilonproteobacteria;Campylobacterales;Campylobacteraceae;Campylobacter", "Bacteria;Actinobacteria;Actinobacteria;Actinomycetales;Actinomycetaceae;Varibaculum", "Bacteria;Firmicutes;Clostridia", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI", "Bacteria;Firmicutes;Clostridia", "Bacteria;Firmicutes;Clostridia;Clostridiales", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI", "Bacteria;Actinobacteria;Actinobacteria;Actinomycetales;Corynebacteriaceae;Corynebacterium", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI", "Bacteria;Firmicutes;Clostridia;Clostridiales", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Anaerococcus", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Peptoniphilus", "Bacteria", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Peptoniphilus", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI", "Bacteria;Firmicutes;Clostridia;Clostridiales", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Anaerococcus", "Bacteria;Actinobacteria;Actinobacteria;Actinomycetales", "Bacteria;Firmicutes;Clostridia;Clostridiales;Veillonellaceae", "Bacteria;Firmicutes;Bacilli;Bacillales;Staphylococcaceae;Staphylococcus", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Finegoldia", "Bacteria", "Bacteria;Firmicutes;Clostridia;Clostridiales", "Bacteria;Firmicutes;Clostridia;Clostridiales;Peptococcaceae;Peptococcus", "Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Porphyromonas", "Bacteria;Firmicutes;Clostridia;Clostridiales", "Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Porphyromonas", "Bacteria;Firmicutes;Clostridia;Clostridiales", "Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Prevotellaceae", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Gallicola", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Gallicola", "Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Prevotellaceae;Prevotella", "Bacteria;Firmicutes;Clostridia", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Anaerococcus", "Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae", "Bacteria;Actinobacteria;Actinobacteria;Actinomycetales;Corynebacteriaceae", "Bacteria;Actinobacteria;Actinobacteria;Actinomycetales;Actinomycetaceae", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Anaerococcus", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Anaerococcus", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Anaerococcus", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI", "Bacteria", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Anaerococcus", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Anaerococcus", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Anaerococcus", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;Anaerococcus", "Bacteria;Actinobacteria;Actinobacteria;Actinomycetales", "Bacteria", "Bacteria;Firmicutes", "Bacteria", "Bacteria", "Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Porphyromonas", "Bacteria", "Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Porphyromonas", "Bacteria;Firmicutes", "Bacteria;Firmicutes", "Bacteria;Firmicutes", "Bacteria", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI", "Bacteria;Firmicutes;Clostridia", "Bacteria;Firmicutes;Clostridia", "Bacteria", "Bacteria;Firmicutes;Clostridia;Clostridiales", "Bacteria", "Bacteria;Firmicutes;Clostridia;Clostridiales", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI", "Bacteria", "Bacteria"];
 
 var colors = [];
 for (var i = 0; i < otu_bubble.length; i++) {
@@ -43,6 +42,7 @@ console.log(colors);
 var trace1 = {
   x: otu_bubble,
   y: sample_values_bubble,
+  text: otu_labels_bubble,
   mode: 'markers',
   marker: {
     size: sample_values_bubble,
@@ -68,6 +68,17 @@ var data = [
     gauge: {
       axis: { range: [null, 9] }
     },
+    steps: [
+      { range: [0, 1], color: "green",opacity: 1.0},
+      { range: [1, 2], color: "green", opacity: 0.8},
+      { range: [2, 3], color: "green" },
+      { range: [3, 4], color: "green" },
+      { range: [4, 5], color: "green" },
+      { range: [5, 6], color: "green" },
+      { range: [6, 7], color: "green" },
+      { range: [7, 8], color: "green" },
+      { range: [8, 9], color: "green" },
+    ],
 		title: { text: "Washing Frequency" },
 		type: "indicator",
 		mode: "gauge+number"
@@ -97,6 +108,12 @@ d3.json("samples.json").then ((importedData) => {
 
     var initData = samples.filter(patient => patient.id == "940");
     console.log(initData);
+
+    var otu_labels_all = initData.map(information => information.otu_labels);
+    //console.log(otu_labels_all);
+
+    var otu_labels_array = otu_labels_all[0];
+    //console.log(otu_labels_array);
 
     var otu_ids_all = initData.map(information => information.otu_ids);
     //console.log(otu_ids_all);
@@ -133,8 +150,10 @@ d3.json("samples.json").then ((importedData) => {
       // Assign the value of the dropdown menu option to a variable
       var dataset = dropdownMenu.property("value");
       console.log(dataset);
+
       var plotData = samples.filter(patient => patient.id == dataset);
       console.log(plotData);
+
       var otu_ids_all = plotData.map(information => information.otu_ids);
       console.log(otu_ids_all);
       var otu_ids_array = otu_ids_all[0];
@@ -159,6 +178,12 @@ d3.json("samples.json").then ((importedData) => {
       final_sample_values = sample_values.reverse();
       console.log(final_sample_values);
 
+      var otu_labels_all = plotData.map(information => information.otu_labels);
+      console.log(otu_ids_all);
+      var otu_labels_array = otu_labels_all[0];
+      var otu_labels = otu_labels_array.slice(0,10);
+      var otu_labels_reversed = otu_labels.reverse();
+
       //var barData = {
         //x: final_sample_values,
         //y: final_otu_ids,
@@ -174,6 +199,7 @@ d3.json("samples.json").then ((importedData) => {
       var trace1 = {
         x: final_sample_values,
         y: final_otu_ids,
+        text: otu_labels_reversed,
         type: "bar",
         orientation: 'h'
       };
@@ -191,6 +217,7 @@ d3.json("samples.json").then ((importedData) => {
 
       //Update the bubble plot that is present on the dashboard....
       //===========================================================
+      
 
       //create a random color list...
       var colors = [];
@@ -203,6 +230,7 @@ d3.json("samples.json").then ((importedData) => {
       var trace1 = {
         x: otu_ids_array,
         y: sample_values_array,
+        text: otu_labels_array,
         mode: 'markers',
         marker: {
           size: sample_values_array,
